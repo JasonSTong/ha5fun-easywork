@@ -1,0 +1,10 @@
+club/ha5fun/easywork/dubbo/server/pojo/IndexTask.class
+club/ha5fun/easywork/dubbo/server/pojo/BaseTaskPojo.class
+club/ha5fun/easywork/dubbo/server/pojo/UserTable.class
+club/ha5fun/easywork/dubbo/server/pojo/BaseTaskContactPojo.class
+club/ha5fun/easywork/dubbo/server/pojo/TaskTable.class
+club/ha5fun/easywork/dubbo/server/pojo/TaskContact.class
+club/ha5fun/easywork/dubbo/server/api/ApiTaskTableServer.class
+club/ha5fun/easywork/dubbo/server/api/ApiUserTableService.class
+club/ha5fun/easywork/dubbo/server/pojo/BaseUserPojo.class
+club/ha5fun/easywork/dubbo/server/api/ApiTaskContactService.class

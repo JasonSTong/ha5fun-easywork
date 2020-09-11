@@ -1,0 +1,12 @@
+club/ha5fun/easywork/dubbo/config/EasyWorkConfig.class
+club/ha5fun/easywork/dubbo/service/IndexTableService.class
+club/ha5fun/easywork/dubbo/service/TaskTableService.class
+club/ha5fun/easywork/dubbo/service/TaskContactService.class
+club/ha5fun/easywork/dubbo/config/ClusterConfigurationProperties.class
+club/ha5fun/easywork/dubbo/DubboApiApplication.class
+club/ha5fun/easywork/dubbo/vo/PicUploadResult.class
+club/ha5fun/easywork/dubbo/service/UserTableService.class
+club/ha5fun/easywork/dubbo/controller/WeChatController.class
+club/ha5fun/easywork/dubbo/controller/TaskTableController.class
+club/ha5fun/easywork/dubbo/service/WeChatService.class
+club/ha5fun/easywork/dubbo/controller/IndexController.class
