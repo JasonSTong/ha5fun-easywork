@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author chen
  * @Company ha5fun.club
+ * @Date 00000
  */
 @Service
 public class UserTableService {
