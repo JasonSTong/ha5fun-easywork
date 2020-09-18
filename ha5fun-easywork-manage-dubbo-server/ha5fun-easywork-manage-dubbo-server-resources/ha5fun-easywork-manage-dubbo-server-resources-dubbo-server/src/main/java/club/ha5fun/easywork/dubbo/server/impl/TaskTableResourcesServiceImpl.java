@@ -1,19 +1,14 @@
 package club.ha5fun.easywork.dubbo.server.impl;
 
+import club.ha5fun.easywork.dubbo.mapper.TaskTableMapper;
 import club.ha5fun.easywork.dubbo.server.TaskTableService;
-import club.ha5fun.easywork.dubbo.server.UserTableService;
-import club.ha5fun.easywork.dubbo.server.pojo.BaseTaskPojo;
-import club.ha5fun.easywork.dubbo.server.pojo.IndexTask;
 import club.ha5fun.easywork.dubbo.server.pojo.TaskTable;
-import club.ha5fun.easywork.dubbo.server.pojo.UserTable;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import javafx.concurrent.Task;
 import org.apache.commons.lang3.StringUtils;
-import org.jboss.netty.util.internal.StringUtil;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -23,6 +18,8 @@ import java.util.List;
 @Transactional
 @Service
 public class TaskTableResourcesServiceImpl extends BaseServiceImpl implements TaskTableService {
+    @Resource
+    TaskTableMapper taskTableMapper;
     /**
      *
      * @param taskTable
@@ -79,6 +76,13 @@ public class TaskTableResourcesServiceImpl extends BaseServiceImpl implements Ta
         taskTable.setTaskState(taskState);
         taskTable.setUserId(userId);
         return super.update(taskTable);
+    }
+
+    @Override
+    public int addOneTask( TaskTable taskTable) {
+        System.out.println(taskTable.getTaskInfo());
+        taskTableMapper.addOneTask(taskTable);
+        return taskTable.getTaskId().intValue();
     }
 
 }

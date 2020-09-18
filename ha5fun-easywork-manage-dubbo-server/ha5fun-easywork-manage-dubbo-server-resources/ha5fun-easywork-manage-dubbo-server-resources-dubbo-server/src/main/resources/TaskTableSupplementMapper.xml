@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.ha5fun.easywork.dubbo.mapper.TaskTableMapper">
+    <insert id="addOneTask" useGeneratedKeys="true" parameterType="club.ha5fun.easywork.dubbo.server.pojo.TaskTable" parameterMap="parameterMapA">
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="taskId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO task_table(user_id,task_info, task_tittle, task_duration, task_state, version, task_push_time)
+        VALUES
+        (#{userId},#{taskInfo}, #{taskTittle}, #{taskDuration}, #{taskState}, #{version}, #{taskPushTime})
+    </insert>
+
+    <resultMap id="resultMap" type="club.ha5fun.easywork.dubbo.server.pojo.TaskTable">
+    <id property="taskId" column="task_id"/>
+    <result property="taskInfo" column="task_info"/>
+    </resultMap>
+    <parameterMap id="parameterMapA" type="club.ha5fun.easywork.dubbo.server.pojo.TaskTable">
+        <parameter property="taskInfo" resultMap="resultMap"/>
+    </parameterMap>
+
+</mapper>

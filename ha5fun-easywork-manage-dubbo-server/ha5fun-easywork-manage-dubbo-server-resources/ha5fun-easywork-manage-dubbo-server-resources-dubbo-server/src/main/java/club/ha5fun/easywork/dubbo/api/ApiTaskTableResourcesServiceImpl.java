@@ -6,6 +6,7 @@ import club.ha5fun.easywork.dubbo.server.pojo.IndexTask;
 import club.ha5fun.easywork.dubbo.server.pojo.TaskTable;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -48,6 +49,10 @@ public class ApiTaskTableResourcesServiceImpl implements ApiTaskTableServer {
         return taskTableService.changeTaskState(taskId,taskState,userId);
     }
 
+    @Override
+    public int addOneTask(TaskTable taskTable) {
+        return taskTableService.addOneTask(taskTable);
+    }
 
 
 }

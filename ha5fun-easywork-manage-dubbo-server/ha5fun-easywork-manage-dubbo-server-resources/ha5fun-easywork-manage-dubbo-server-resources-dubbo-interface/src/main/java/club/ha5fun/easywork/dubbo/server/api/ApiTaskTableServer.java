@@ -2,6 +2,7 @@ package club.ha5fun.easywork.dubbo.server.api;
 
 import club.ha5fun.easywork.dubbo.server.pojo.IndexTask;
 import club.ha5fun.easywork.dubbo.server.pojo.TaskTable;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -46,5 +47,10 @@ public interface ApiTaskTableServer {
      */
     Integer changeTaskState(Long taskId , int taskState , Long UserId);
 
-
+    /**
+     * 添加一个任务
+     * @param taskTable
+     * @return 返回添加的任务id
+     */
+    int addOneTask( TaskTable taskTable);
 }

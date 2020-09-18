@@ -18,7 +18,6 @@ public class TaskContact extends BaseTaskContactPojo {
     /**
      * 任务ID
      */
-    @TableId(value = "task_id")
     private Long taskId;
     /**
      * 任务发布者ID

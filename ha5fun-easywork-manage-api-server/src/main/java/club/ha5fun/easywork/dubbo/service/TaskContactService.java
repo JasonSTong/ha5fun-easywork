@@ -38,13 +38,14 @@ public class TaskContactService {
 
     public Boolean saveTaskContact(TaskTable taskTable , TaskContact taskContact){
         int result = 0;
-        System.out.println(taskTable.getTaskId());
-        int tableResult = this.apiTaskTableServer.saveTaskTableResources(taskTable);
-        System.out.println(taskTable.getTaskId());
-        System.out.println(tableResult);
+
+        int taskId = this.apiTaskTableServer.addOneTask(taskTable);
+        System.out.println(taskId);
+        taskContact.setTaskId((long) taskId);
+        System.out.println(taskId);
         int contactResult = this.apiTaskContactService.saveContact(taskContact);
 
-        if(tableResult == contactResult && contactResult == 1 ){
+        if(contactResult == 1 ){
             result = 1;
         }
         return result == 1 ;

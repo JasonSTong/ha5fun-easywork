@@ -2,6 +2,7 @@ package club.ha5fun.easywork.dubbo.server;
 
 import club.ha5fun.easywork.dubbo.server.pojo.IndexTask;
 import club.ha5fun.easywork.dubbo.server.pojo.TaskTable;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -44,5 +45,12 @@ public interface TaskTableService {
      * @return   -1：输入的参数不符合要求 ，0：数据修改数据库失败 ，1：数据插入成功
      */
     Integer changeTaskState(Long taskId , int taskState,Long userId);
+
+    /**
+     * 添加一个任务
+     * @param taskTable
+     * @return 返回添加的任务id
+     */
+    int addOneTask(TaskTable taskTable);
 
 }

@@ -33,6 +33,9 @@ public class TaskTableService {
                 this.apiTaskTableServer.saveTaskTableResources(taskTable);
         return result == 1;
     }
+    public int testSave(TaskTable taskTable){
+        return this.apiTaskTableServer.addOneTask(taskTable);
+    }
 
     /**
      * 查询所有任务
